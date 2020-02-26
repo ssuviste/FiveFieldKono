@@ -3,4 +3,18 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colorGlass">#A6E0EEEE</color>
+    <color name="colorGlassFrosted">#CCD4E4E4</color>
+
+    <color name="colorGray">#B3B3B3</color>
+
+    <color name="colorBlue">#A600BBFF</color>
+    <color name="colorBlueHighlighted">#A608F7FF</color>
+
+    <color name="colorOrange">#A6FF9400</color>
+    <color name="colorOrangeHighlighted">#A6FFD500</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransparent">#00FFFFFF</color>
 </resources>

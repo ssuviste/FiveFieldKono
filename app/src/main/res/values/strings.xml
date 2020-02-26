@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">KonoBoardgame</string>
+    <string name="app_name">Five Field Kono</string>
+    <string name="stats_title">Game Statistics</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+    <string name="play_btn">Play</string>
+    <string name="clear_btn">Clear</string>
+    <string name="ai_btn">Single Player Mode</string>
 </resources>
