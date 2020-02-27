@@ -15,7 +15,7 @@
         app:layout_constraintGuide_percent="0.25" />
 
     <include
-        android:id="@+id/separator_line"
+        android:id="@+id/separatorLine"
         layout="@layout/separator_line"
         android:layout_width="0dp"
         android:layout_height="1dp"
@@ -28,7 +28,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <include
-        android:id="@+id/game_stats"
+        android:id="@+id/gameStats"
         layout="@layout/game_stats"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <include
-        android:id="@+id/game_board"
+        android:id="@+id/gameBoard"
         layout="@layout/game_board"
         android:layout_width="0dp"
         android:layout_height="0dp"

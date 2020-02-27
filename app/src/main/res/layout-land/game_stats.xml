@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/stats_title"
+        android:id="@+id/statsTitle"
         style="@style/gameStatisticsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,125 +16,125 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/player1_color"
+        android:id="@+id/player1Color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/player1"
         android:tint="@color/colorOrange"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toStartOf="@+id/player1_name"
+        app:layout_constraintBottom_toTopOf="@+id/player2Color"
+        app:layout_constraintEnd_toStartOf="@+id/player1Name"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stats_title"
-        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintTop_toBottomOf="@+id/statsTitle"
+        app:layout_constraintVertical_chainStyle="packed"
         app:srcCompat="@android:drawable/checkbox_off_background" />
 
     <TextView
-        android:id="@+id/player1_name"
+        android:id="@+id/player1Name"
         style="@style/gameStatisticsPlayerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/player1"
-        app:layout_constraintBottom_toBottomOf="@+id/player1_color"
-        app:layout_constraintEnd_toStartOf="@+id/player1_score"
+        app:layout_constraintBottom_toBottomOf="@+id/player1Color"
+        app:layout_constraintEnd_toStartOf="@+id/player1Score"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/player1_color"
-        app:layout_constraintTop_toTopOf="@+id/player1_color" />
+        app:layout_constraintStart_toEndOf="@+id/player1Color"
+        app:layout_constraintTop_toTopOf="@+id/player1Color"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/player1_score"
+        android:id="@+id/player1Score"
         style="@style/gameStatisticsPlayerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:text="0"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/player1_name"
+        app:layout_constraintBottom_toBottomOf="@+id/player1Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/player1_name"
-        app:layout_constraintTop_toTopOf="@+id/player1_name" />
+        app:layout_constraintStart_toEndOf="@+id/player1Name"
+        app:layout_constraintTop_toTopOf="@+id/player1Name"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/player2_color"
+        android:id="@+id/player2Color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/player2"
         android:tint="@color/colorBlue"
-        app:layout_constraintEnd_toEndOf="@+id/player1_color"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/player1_color"
-        app:layout_constraintTop_toBottomOf="@+id/player1_color"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRestart"
+        app:layout_constraintEnd_toEndOf="@+id/player1Color"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/player1Color"
+        app:layout_constraintTop_toBottomOf="@+id/player1Color"
         app:srcCompat="@android:drawable/checkbox_off_background" />
 
     <TextView
-        android:id="@+id/player2_name"
+        android:id="@+id/player2Name"
         style="@style/gameStatisticsPlayerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/player2"
-        app:layout_constraintBottom_toBottomOf="@+id/player2_color"
-        app:layout_constraintStart_toStartOf="@+id/player1_name"
-        app:layout_constraintTop_toTopOf="@+id/player2_color"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toBottomOf="@+id/player2Color"
+        app:layout_constraintStart_toStartOf="@+id/player1Name"
+        app:layout_constraintTop_toTopOf="@+id/player2Color"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/player2_score"
+        android:id="@+id/player2Score"
         style="@style/gameStatisticsPlayerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/player2_name"
-        app:layout_constraintEnd_toEndOf="@+id/player1_score"
-        app:layout_constraintStart_toStartOf="@+id/player1_score"
-        app:layout_constraintTop_toTopOf="@+id/player2_name"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toBottomOf="@+id/player2Name"
+        app:layout_constraintEnd_toEndOf="@+id/player1Score"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/player1Score"
+        app:layout_constraintTop_toTopOf="@+id/player2Name"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TableLayout
-        android:id="@+id/tableLayout"
+    <Button
+        android:id="@+id/buttonRestart"
+        style="@style/gameStatisticsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/rst_btn"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAI"
+        app:layout_constraintEnd_toStartOf="@+id/buttonHelp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonHelp"
+        style="@style/gameStatisticsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonHelpOnClick"
+        android:text="@string/help_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonRestart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonRestart"
+        app:layout_constraintTop_toTopOf="@+id/buttonRestart"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/play_btn"
-                style="@style/gameStatisticsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/play_btn" />
-
-            <Button
-                android:id="@+id/rst_btn"
-                style="@style/gameStatisticsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/clear_btn" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/ai_btn"
-                style="@style/gameStatisticsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="2"
-                android:text="@string/ai_btn" />
-        </TableRow>
-
-    </TableLayout>
+    <Button
+        android:id="@+id/buttonAI"
+        style="@style/gameStatisticsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_span="2"
+        android:onClick="buttonAIOnClick"
+        android:text="@string/ai_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonHelp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonRestart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

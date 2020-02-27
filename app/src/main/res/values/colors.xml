@@ -6,8 +6,12 @@
 
     <color name="colorGlass">#A6E0EEEE</color>
     <color name="colorGlassFrosted">#CCD4E4E4</color>
+    <color name="colorGlassDimmed">#E6D4E4E4</color>
+
+    <color name="colorGreenHighlighted">#A675F8B0</color>
 
     <color name="colorGray">#B3B3B3</color>
+    <color name="colorLightGray">#E3E3E3</color>
 
     <color name="colorBlue">#A600BBFF</color>
     <color name="colorBlueHighlighted">#A608F7FF</color>

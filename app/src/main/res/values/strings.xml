@@ -3,7 +3,16 @@
     <string name="stats_title">Game Statistics</string>
     <string name="player1">Player 1</string>
     <string name="player2">Player 2</string>
-    <string name="play_btn">Play</string>
-    <string name="clear_btn">Clear</string>
+    <string name="rst_btn">Restart</string>
+    <string name="help_btn">Help</string>
     <string name="ai_btn">Single Player Mode</string>
+    <string name="help_title">Instructions</string>
+    <string name="help_text">Five Field Kono (오밭고누) is a Korean abstract strategy game.
+        As in Chinese checkers, a player wins by moving all of their pieces into the starting
+        positions of their opponent\'s pieces. Players take turns moving one of their pieces
+        one square diagonally. The first player to move all of their pieces to their opponent\'s
+        starting squares wins.\n\nPlayer scores can be observed under \"Game Statistics\".\n\nRESTART
+        button resets the game board.\n\nSINGLE PLAYER MODE button turns on the AI opponent.
+    </string>
+    <string name="help_close">Close</string>
 </resources>
