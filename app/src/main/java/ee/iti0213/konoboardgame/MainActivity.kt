@@ -1,14 +1,13 @@
 package ee.iti0213.konoboardgame
 
 import android.content.Intent
-import android.os.Build
+import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
 
-@RequiresApi(Build.VERSION_CODES.M)
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,17 +15,25 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun boardButtonOnClick(view: View) {
-        val buttonId = findViewById<Button>(view.id)
-        when (buttonId.backgroundTintList) {
-            getColorStateList(R.color.colorBlue) ->
-                buttonId.backgroundTintList = getColorStateList(R.color.colorBlueHighlighted)
-            getColorStateList(R.color.colorBlueHighlighted) ->
-                buttonId.backgroundTintList = getColorStateList(R.color.colorBlue)
-            getColorStateList(R.color.colorOrange) ->
-                buttonId.backgroundTintList = getColorStateList(R.color.colorOrangeHighlighted)
-            getColorStateList(R.color.colorOrangeHighlighted) ->
-                buttonId.backgroundTintList = getColorStateList(R.color.colorOrange)
+    private fun changeButtonColor(view: View, colorList1: ColorStateList?, colorList2: ColorStateList?) {
+        when (ViewCompat.getBackgroundTintList(view)) {
+            colorList1 ->
+                ViewCompat.setBackgroundTintList(view, colorList2)
+            colorList2 ->
+                ViewCompat.setBackgroundTintList(view, colorList1)
+            else -> return
+        }
+    }
+
+    fun buttonBoardOnClick(view: View) {
+        val orange = ContextCompat.getColorStateList(this, R.color.colorOrange)
+        val orangeH = ContextCompat.getColorStateList(this, R.color.colorOrangeHighlighted)
+        val blue = ContextCompat.getColorStateList(this, R.color.colorBlue)
+        val blueH = ContextCompat.getColorStateList(this, R.color.colorBlueHighlighted)
+
+        when (ViewCompat.getBackgroundTintList(view)) {
+            blue, blueH -> changeButtonColor(view, blue, blueH)
+            orange, orangeH -> changeButtonColor(view, orange, orangeH)
         }
     }
 
@@ -36,12 +43,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun buttonAIOnClick(view: View) {
-        val buttonId = findViewById<Button>(view.id)
-        when (buttonId.backgroundTintList) {
-            getColorStateList(R.color.colorGlassFrosted) ->
-                buttonId.backgroundTintList = getColorStateList(R.color.colorGreenHighlighted)
-            getColorStateList(R.color.colorGreenHighlighted) ->
-                buttonId.backgroundTintList = getColorStateList(R.color.colorGlassFrosted)
-        }
+        val glassFrosted = ContextCompat.getColorStateList(this, R.color.colorGlassFrosted)
+        val greenH = ContextCompat.getColorStateList(this, R.color.colorGreenHighlighted)
+        changeButtonColor(view, glassFrosted, greenH)
     }
 }

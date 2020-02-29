@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -11,7 +11,7 @@
     <style name="helpScreen" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
-        <item name="android:windowBackground">@color/colorGlassDimmed</item>
+        <item name="android:windowBackground">@color/colorGlassFoggy</item>
     </style>
 
     <style name="helpTitle">
@@ -32,7 +32,7 @@
 
     <style name="helpClose">
         <item name="android:text">@string/help_close</item>
-        <item name="android:textStyle">italic</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@android:color/tab_indicator_text</item>
         <item name="android:textAllCaps">true</item>
@@ -41,7 +41,10 @@
     <style name="gameStatisticsTitle">
         <item name="android:text">@string/stats_title</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">18sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
         <item name="android:textColor">@color/colorGray</item>
         <item name="android:textAllCaps">false</item>
     </style>
@@ -49,7 +52,9 @@
     <style name="gameStatisticsPlayerName">
         <item name="android:text">@string/stats_title</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:textSize">14sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">14sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
         <item name="android:textColor">@color/colorGray</item>
         <item name="android:textAllCaps">false</item>
     </style>
@@ -58,21 +63,24 @@
         <item name="backgroundTint">@color/colorGlassFrosted</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@android:color/tab_indicator_text</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">14sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
     </style>
     
     <style name="gameButtonClear" parent="Widget.AppCompat.Button">
-        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/colorGlass</item>
-        <item name="android:onClick">boardButtonOnClick</item>
+        <item name="backgroundTint">@color/colorGlass</item>
+        <item name="android:onClick">buttonBoardOnClick</item>
     </style>
 
     <style name="gameButtonBlue" parent="Widget.AppCompat.Button">
-        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/colorBlue</item>
-        <item name="android:onClick">boardButtonOnClick</item>
+        <item name="backgroundTint">@color/colorBlue</item>
+        <item name="android:onClick">buttonBoardOnClick</item>
     </style>
 
     <style name="gameButtonOrange" parent="Widget.AppCompat.Button">
-        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/colorOrange</item>
-        <item name="android:onClick">boardButtonOnClick</item>
+        <item name="backgroundTint">@color/colorOrange</item>
+        <item name="android:onClick">buttonBoardOnClick</item>
     </style>
 
 </resources>
