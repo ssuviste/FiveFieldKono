@@ -46,6 +46,8 @@
     <style name="gameStatisticsTitle">
         <item name="android:text">@string/stats_title</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">64sp</item>
+        <item name="android:maxLines">1</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="android:textColor">@color/colorGray</item>
@@ -55,6 +57,8 @@
     <style name="gameStatisticsPlayerName">
         <item name="android:text">@string/stats_title</item>
         <item name="android:textStyle">italic</item>
+        <item name="autoSizeMaxTextSize">64sp</item>
+        <item name="android:maxLines">1</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="android:textColor">@color/colorGray</item>

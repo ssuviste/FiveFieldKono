@@ -9,14 +9,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.45012164" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineP2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineP3"
@@ -130,6 +130,7 @@
     <Button
         android:id="@+id/buttonRestart"
         style="@style/gameStatisticsButton"
+        android:maxLines="1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/rst_btn"
@@ -145,6 +146,7 @@
     <Button
         android:id="@+id/buttonHelp"
         style="@style/gameStatisticsButton"
+        android:maxLines="1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="buttonHelpOnClick"
