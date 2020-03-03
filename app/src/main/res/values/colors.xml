@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryOriginal">#008577</color>
+    <color name="colorPrimaryDarkOriginal">#00574B</color>
+    <color name="colorPrimary">#78909C</color>
+    <color name="colorPrimaryDark">#445861</color>
     <color name="colorAccent">#D81B60</color>
 
     <color name="colorGlass">#A6E0EEEE</color>
-    <color name="colorGlassFrosted">#CCD4E4E4</color>
-    <color name="colorGlassFoggy">#E6D4E4E4</color>
+    <color name="colorGlassFrosted">#A6D7E6E6</color>
+    <color name="colorGlassFoggy">#D9D4E4E4</color>
 
     <color name="colorGreenHighlighted">#A675F8B0</color>
 
