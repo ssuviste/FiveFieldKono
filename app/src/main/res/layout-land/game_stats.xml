@@ -24,7 +24,6 @@
         style="@style/gameStatisticsTitle"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:gravity="center_horizontal"
         android:text="@string/stats_title"
         app:layout_constraintBottom_toTopOf="@+id/guidelineL1"
         app:layout_constraintEnd_toEndOf="parent"
