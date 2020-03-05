@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.Guideline
@@ -22,12 +22,12 @@
     <TextView
         android:id="@+id/statsTitle"
         style="@style/gameStatisticsTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/stats_title"
         app:layout_constraintBottom_toTopOf="@+id/guidelineL1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonHelp"
+        app:layout_constraintStart_toStartOf="@+id/buttonRestart"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -42,7 +42,7 @@
         android:tint="@color/colorOrange"
         app:layout_constraintBottom_toTopOf="@+id/player2Color"
         app:layout_constraintEnd_toStartOf="@+id/player1Name"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@+id/statsTitle"
         app:layout_constraintTop_toBottomOf="@+id/statsTitle"
@@ -63,7 +63,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/player1Color"
         app:layout_constraintTop_toBottomOf="@+id/statsTitle"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <TextView
         android:id="@+id/player1Score"
@@ -95,7 +95,7 @@
         android:tint="@color/colorBlue"
         app:layout_constraintBottom_toTopOf="@+id/buttonRestart"
         app:layout_constraintEnd_toStartOf="@+id/player2Name"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@+id/statsTitle"
         app:layout_constraintTop_toBottomOf="@+id/player1Color"
@@ -144,7 +144,6 @@
         android:text="@string/rst_btn"
         app:layout_constraintBottom_toTopOf="@+id/buttonAI"
         app:layout_constraintEnd_toStartOf="@+id/buttonHelp"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guidelineL2" />
@@ -156,12 +155,12 @@
         android:layout_height="0dp"
         android:onClick="buttonHelpOnClick"
         android:text="@string/help_btn"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonRestart"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAI"
+        app:layout_constraintDimensionRatio="w,170:90"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonRestart"
-        app:layout_constraintTop_toTopOf="@+id/buttonRestart"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/guidelineL2" />
 
     <Button
         android:id="@+id/buttonAI"

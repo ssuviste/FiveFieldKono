@@ -5,6 +5,7 @@ import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
@@ -19,10 +20,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //initGameBoard()
     }
 
+    /*private fun initGameBoard() {
+        val button = findViewById<Button>(R.id.button33)
+        val orange = ContextCompat.getColorStateList(this, R.color.colorOrange)
+        ViewCompat.setBackgroundTintList(button, orange)
+    }*/
+
     // Just for testing UI color change
-    private fun changeButtonColor(view: View, colorList1: ColorStateList?, colorList2: ColorStateList?) {
+    private fun swapButtonColor(view: View, colorList1: ColorStateList?, colorList2: ColorStateList?) {
         when (ViewCompat.getBackgroundTintList(view)) {
             colorList1 ->
                 ViewCompat.setBackgroundTintList(view, colorList2)
@@ -63,8 +71,8 @@ class MainActivity : AppCompatActivity() {
         val blueH = ContextCompat.getColorStateList(this, R.color.colorBlueHighlighted)
 
         when (ViewCompat.getBackgroundTintList(view)) {
-            blue, blueH -> changeButtonColor(view, blue, blueH)
-            orange, orangeH -> changeButtonColor(view, orange, orangeH)
+            blue, blueH -> swapButtonColor(view, blue, blueH)
+            orange, orangeH -> swapButtonColor(view, orange, orangeH)
         }
 
         swapPlayerHighlights()
@@ -78,6 +86,6 @@ class MainActivity : AppCompatActivity() {
     fun buttonAIOnClick(view: View) {
         val glassFrosted = ContextCompat.getColorStateList(this, R.color.colorGlassFrosted)
         val greenH = ContextCompat.getColorStateList(this, R.color.colorGreenHighlighted)
-        changeButtonColor(view, glassFrosted, greenH)
+        swapButtonColor(view, glassFrosted, greenH)
     }
 }

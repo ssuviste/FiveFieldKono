@@ -73,6 +73,7 @@
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">14sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
+        <item name="android:maxLines">1</item>
     </style>
     
     <style name="gameButtonClear" parent="Widget.AppCompat.Button">
