@@ -10,9 +10,10 @@
     <color name="colorGlassFrosted">#A6D7E6E6</color>
     <color name="colorGlassFoggy">#D9D4E4E4</color>
 
-    <color name="colorGreenHighlighted">#A675F8B0</color>
+    <color name="colorGreen">#009F48</color>
 
     <color name="colorGray">#B3B3B3</color>
+    <color name="colorGlassGray">#B1BCBE</color>
     <color name="colorLightGray">#E3E3E3</color>
 
     <color name="colorBlue">#A600BBFF</color>

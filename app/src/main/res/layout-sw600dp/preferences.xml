@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prefSettings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/prefSettingsScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchBlueStarts"
+                android:theme="@style/popupSwitchTheme"
+                style="@style/popupSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_blue_start"
+                android:padding="34dp"
+                android:paddingStart="96dp"
+                android:paddingEnd="96dp"
+                android:textSize="32sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchBlueAI"
+                android:theme="@style/popupSwitchTheme"
+                style="@style/popupSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_blue_ai"
+                android:padding="34dp"
+                android:paddingStart="96dp"
+                android:paddingEnd="96dp"
+                android:textSize="32sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchOrangeAI"
+                android:theme="@style/popupSwitchTheme"
+                style="@style/popupSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_orange_ai"
+                android:padding="34dp"
+                android:paddingStart="96dp"
+                android:paddingEnd="96dp"
+                android:textSize="32sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

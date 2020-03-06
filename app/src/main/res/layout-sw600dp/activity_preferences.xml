@@ -2,63 +2,70 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/helpScreen"
+    android:id="@+id/prefScreen"
     android:background="@drawable/popup_bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HelpActivity">
+    tools:context=".PreferencesActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineT1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
 
     <TextView
-        android:id="@+id/helpScreenTitle"
+        android:id="@+id/prefScreenTitle"
         style="@style/popupTitle"
+        android:text="@string/pref_title"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:text="@string/help_title"
-        app:layout_constraintBottom_toTopOf="@id/helpScreenScrollView"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineT1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside" />
 
-    <ScrollView
-        android:id="@+id/helpScreenScrollView"
+    <include
+        android:id="@+id/prefScreenSettings"
+        layout="@layout/preferences"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/helpScreenClose"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineT2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/helpScreenTitle">
-
-        <TextView
-            android:id="@+id/helpScreenText"
-            style="@style/popupText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/help_text" />
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/prefScreenTitle" />
 
     <TextView
-        android:id="@+id/helpScreenClose"
+        android:id="@+id/prefScreenClose"
         style="@style/popupClose"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
-        android:onClick="helpScreenCloseOnClick"
+        android:onClick="prefScreenCloseOnClick"
         android:text="@string/popup_close"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/helpScreenScrollView" />
+        app:layout_constraintTop_toTopOf="@+id/guidelineT2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,26 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="0dp">
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/button00"
         style="@style/gameButtonBlue"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/button21"
+        app:layout_constraintBottom_toTopOf="@+id/button10"
         app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintEnd_toStartOf="@+id/button01"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/button01"
         style="@style/gameButtonBlue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button00"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/button02"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button00"
+        app:layout_constraintTop_toTopOf="@+id/button00" />
+
+    <Button
+        android:id="@+id/button02"
+        style="@style/gameButtonBlue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button01"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/button03"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button01"
+        app:layout_constraintTop_toTopOf="@+id/button01" />
+
+    <Button
+        android:id="@+id/button03"
+        style="@style/gameButtonBlue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button02"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/button04"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button02"
+        app:layout_constraintTop_toTopOf="@+id/button02" />
+
+    <Button
+        android:id="@+id/button04"
+        style="@style/gameButtonBlue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button03"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button03"
+        app:layout_constraintTop_toTopOf="@+id/button03" />
+
+    <Button
+        android:id="@+id/button10"
+        style="@style/gameButtonBlue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button20"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/button11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button00" />
+
+    <Button
+        android:id="@+id/button11"
+        style="@style/gameButtonClear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button10"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button10"
+        app:layout_constraintTop_toTopOf="@+id/button10" />
+
+    <Button
+        android:id="@+id/button12"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button11"
@@ -32,7 +103,7 @@
 
     <Button
         android:id="@+id/button13"
-        style="@style/gameButtonBlue"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button12"
@@ -49,34 +120,34 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button13"
         app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button15"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button13"
         app:layout_constraintTop_toTopOf="@+id/button13" />
 
     <Button
-        android:id="@+id/button15"
-        style="@style/gameButtonBlue"
+        android:id="@+id/button20"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button14"
+        app:layout_constraintBottom_toTopOf="@+id/button30"
         app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button21"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button14"
-        app:layout_constraintTop_toTopOf="@+id/button14" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
 
     <Button
         android:id="@+id/button21"
-        style="@style/gameButtonBlue"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/button31"
+        app:layout_constraintBottom_toBottomOf="@+id/button20"
         app:layout_constraintDimensionRatio="h,1:1"
         app:layout_constraintEnd_toStartOf="@+id/button22"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button11" />
+        app:layout_constraintStart_toEndOf="@+id/button20"
+        app:layout_constraintTop_toTopOf="@+id/button20" />
 
     <Button
         android:id="@+id/button22"
@@ -109,201 +180,129 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button23"
         app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button25"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button23"
         app:layout_constraintTop_toTopOf="@+id/button23" />
 
     <Button
-        android:id="@+id/button25"
-        style="@style/gameButtonBlue"
+        android:id="@+id/button30"
+        style="@style/gameButtonOrange"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button24"
+        app:layout_constraintBottom_toTopOf="@+id/button40"
         app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button31"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button24"
-        app:layout_constraintTop_toTopOf="@+id/button24" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button20" />
 
     <Button
         android:id="@+id/button31"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/button41"
+        app:layout_constraintBottom_toBottomOf="@+id/button32"
         app:layout_constraintDimensionRatio="h,1:1"
         app:layout_constraintEnd_toStartOf="@+id/button32"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button21" />
+        app:layout_constraintStart_toEndOf="@+id/button30"
+        app:layout_constraintTop_toTopOf="@+id/button32" />
 
     <Button
         android:id="@+id/button32"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button31"
+        app:layout_constraintBottom_toBottomOf="@+id/button33"
         app:layout_constraintDimensionRatio="h,1:1"
         app:layout_constraintEnd_toStartOf="@+id/button33"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button31"
-        app:layout_constraintTop_toTopOf="@+id/button31" />
+        app:layout_constraintTop_toTopOf="@+id/button33" />
 
     <Button
         android:id="@+id/button33"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button32"
+        app:layout_constraintBottom_toBottomOf="@+id/button34"
         app:layout_constraintDimensionRatio="h,1:1"
         app:layout_constraintEnd_toStartOf="@+id/button34"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button32"
-        app:layout_constraintTop_toTopOf="@+id/button32" />
+        app:layout_constraintTop_toTopOf="@+id/button34" />
 
     <Button
         android:id="@+id/button34"
-        style="@style/gameButtonClear"
+        style="@style/gameButtonOrange"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button33"
-        app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button35"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button33"
-        app:layout_constraintTop_toTopOf="@+id/button33" />
-
-    <Button
-        android:id="@+id/button35"
-        style="@style/gameButtonClear"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button34"
+        app:layout_constraintBottom_toBottomOf="@+id/button30"
         app:layout_constraintDimensionRatio="h,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button34"
-        app:layout_constraintTop_toTopOf="@+id/button34" />
+        app:layout_constraintStart_toEndOf="@+id/button33"
+        app:layout_constraintTop_toTopOf="@+id/button30" />
+
+    <Button
+        android:id="@+id/button40"
+        style="@style/gameButtonOrange"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/button41"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button30" />
 
     <Button
         android:id="@+id/button41"
         style="@style/gameButtonOrange"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/button51"
+        app:layout_constraintBottom_toBottomOf="@+id/button40"
         app:layout_constraintDimensionRatio="h,1:1"
         app:layout_constraintEnd_toStartOf="@+id/button42"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button31" />
+        app:layout_constraintStart_toEndOf="@+id/button40"
+        app:layout_constraintTop_toTopOf="@+id/button40" />
 
     <Button
         android:id="@+id/button42"
-        style="@style/gameButtonClear"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button43"
-        app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button43"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button41"
-        app:layout_constraintTop_toTopOf="@+id/button43" />
-
-    <Button
-        android:id="@+id/button43"
-        style="@style/gameButtonClear"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button44"
-        app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button44"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button42"
-        app:layout_constraintTop_toTopOf="@+id/button44" />
-
-    <Button
-        android:id="@+id/button44"
-        style="@style/gameButtonClear"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button45"
-        app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button45"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button43"
-        app:layout_constraintTop_toTopOf="@+id/button45" />
-
-    <Button
-        android:id="@+id/button45"
         style="@style/gameButtonOrange"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button41"
         app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button43"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button44"
+        app:layout_constraintStart_toEndOf="@+id/button41"
         app:layout_constraintTop_toTopOf="@+id/button41" />
 
     <Button
-        android:id="@+id/button51"
+        android:id="@+id/button43"
         style="@style/gameButtonOrange"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/button42"
         app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button52"
+        app:layout_constraintEnd_toStartOf="@+id/button44"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button41" />
+        app:layout_constraintStart_toEndOf="@+id/button42"
+        app:layout_constraintTop_toTopOf="@+id/button42" />
 
     <Button
-        android:id="@+id/button52"
+        android:id="@+id/button44"
         style="@style/gameButtonOrange"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button51"
-        app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button53"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button51"
-        app:layout_constraintTop_toTopOf="@+id/button51" />
-
-    <Button
-        android:id="@+id/button53"
-        style="@style/gameButtonOrange"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button52"
-        app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button54"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button52"
-        app:layout_constraintTop_toTopOf="@+id/button52" />
-
-    <Button
-        android:id="@+id/button54"
-        style="@style/gameButtonOrange"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button53"
-        app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button55"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button53"
-        app:layout_constraintTop_toTopOf="@+id/button53" />
-
-    <Button
-        android:id="@+id/button55"
-        style="@style/gameButtonOrange"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button54"
+        app:layout_constraintBottom_toBottomOf="@+id/button43"
         app:layout_constraintDimensionRatio="h,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button54"
-        app:layout_constraintTop_toTopOf="@+id/button54" />
+        app:layout_constraintStart_toEndOf="@+id/button43"
+        app:layout_constraintTop_toTopOf="@+id/button43" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

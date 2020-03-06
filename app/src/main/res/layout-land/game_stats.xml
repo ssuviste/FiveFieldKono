@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -74,7 +73,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center|end"
-        android:text="0"
+        android:text="@string/initial_score"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/player2Score"
         app:layout_constraintEnd_toEndOf="@+id/statsTitle"
@@ -111,7 +110,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="32dp"
         android:gravity="center|end"
-        android:text="0"
+        android:text="@string/initial_score"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@id/guidelineL2"
         app:layout_constraintEnd_toEndOf="@+id/statsTitle"
@@ -141,8 +140,9 @@
         style="@style/gameStatisticsButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:onClick="buttonRestartOnClick"
         android:text="@string/rst_btn"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAI"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPreferences"
         app:layout_constraintEnd_toStartOf="@+id/buttonHelp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -164,13 +164,13 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/buttonAI"
+        android:id="@+id/buttonPreferences"
         style="@style/gameStatisticsButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_span="2"
-        android:onClick="buttonAIOnClick"
-        android:text="@string/ai_btn"
+        android:onClick="buttonPreferencesOnClick"
+        android:text="@string/pref_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonHelp"
         app:layout_constraintHorizontal_bias="0.5"

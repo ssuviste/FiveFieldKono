@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import kotlinx.android.synthetic.main.game_stats.*
@@ -78,14 +79,21 @@ class MainActivity : AppCompatActivity() {
         swapPlayerHighlights()
     }
 
+    fun buttonRestartOnClick(view: View) {
+        if (Preferences.getBlueStarts()) {
+            Toast.makeText(this, "TRUE", Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(this, "FALSE", Toast.LENGTH_LONG).show()
+        }
+    }
+
     fun buttonHelpOnClick(view: View) {
         val intent = Intent(this, HelpActivity::class.java)
         startActivity(intent)
     }
 
-    fun buttonAIOnClick(view: View) {
-        val glassFrosted = ContextCompat.getColorStateList(this, R.color.colorGlassFrosted)
-        val greenH = ContextCompat.getColorStateList(this, R.color.colorGreenHighlighted)
-        swapButtonColor(view, glassFrosted, greenH)
+    fun buttonPreferencesOnClick(view: View) {
+        val intent = Intent(this, PreferencesActivity::class.java)
+        startActivity(intent)
     }
 }
