@@ -7,9 +7,11 @@
 
     <Button
         android:id="@+id/button00"
-        style="@style/gameButtonBlue"
+        android:tag="00"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:onClick="buttonBoardOnClick"
         app:layout_constraintBottom_toTopOf="@+id/button10"
         app:layout_constraintDimensionRatio="h,1:1"
         app:layout_constraintEnd_toStartOf="@+id/button01"
@@ -19,7 +21,8 @@
 
     <Button
         android:id="@+id/button01"
-        style="@style/gameButtonBlue"
+        android:tag="01"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button00"
@@ -31,7 +34,8 @@
 
     <Button
         android:id="@+id/button02"
-        style="@style/gameButtonBlue"
+        android:tag="02"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button01"
@@ -43,7 +47,8 @@
 
     <Button
         android:id="@+id/button03"
-        style="@style/gameButtonBlue"
+        android:tag="03"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button02"
@@ -55,7 +60,8 @@
 
     <Button
         android:id="@+id/button04"
-        style="@style/gameButtonBlue"
+        android:tag="04"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button03"
@@ -67,7 +73,8 @@
 
     <Button
         android:id="@+id/button10"
-        style="@style/gameButtonBlue"
+        android:tag="10"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/button20"
@@ -79,6 +86,7 @@
 
     <Button
         android:id="@+id/button11"
+        android:tag="11"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -91,6 +99,7 @@
 
     <Button
         android:id="@+id/button12"
+        android:tag="12"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -103,6 +112,7 @@
 
     <Button
         android:id="@+id/button13"
+        android:tag="13"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -115,7 +125,8 @@
 
     <Button
         android:id="@+id/button14"
-        style="@style/gameButtonBlue"
+        android:tag="14"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button13"
@@ -127,6 +138,7 @@
 
     <Button
         android:id="@+id/button20"
+        android:tag="20"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -139,6 +151,7 @@
 
     <Button
         android:id="@+id/button21"
+        android:tag="21"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -151,6 +164,7 @@
 
     <Button
         android:id="@+id/button22"
+        android:tag="22"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -163,6 +177,7 @@
 
     <Button
         android:id="@+id/button23"
+        android:tag="23"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -175,6 +190,7 @@
 
     <Button
         android:id="@+id/button24"
+        android:tag="24"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -187,7 +203,8 @@
 
     <Button
         android:id="@+id/button30"
-        style="@style/gameButtonOrange"
+        android:tag="30"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/button40"
@@ -199,6 +216,7 @@
 
     <Button
         android:id="@+id/button31"
+        android:tag="31"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -211,6 +229,7 @@
 
     <Button
         android:id="@+id/button32"
+        android:tag="32"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -223,6 +242,7 @@
 
     <Button
         android:id="@+id/button33"
+        android:tag="33"
         style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -235,7 +255,8 @@
 
     <Button
         android:id="@+id/button34"
-        style="@style/gameButtonOrange"
+        android:tag="34"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button30"
@@ -247,7 +268,8 @@
 
     <Button
         android:id="@+id/button40"
-        style="@style/gameButtonOrange"
+        android:tag="40"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -259,7 +281,8 @@
 
     <Button
         android:id="@+id/button41"
-        style="@style/gameButtonOrange"
+        android:tag="41"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button40"
@@ -271,7 +294,8 @@
 
     <Button
         android:id="@+id/button42"
-        style="@style/gameButtonOrange"
+        android:tag="42"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button41"
@@ -283,7 +307,8 @@
 
     <Button
         android:id="@+id/button43"
-        style="@style/gameButtonOrange"
+        android:tag="43"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button42"
@@ -295,7 +320,8 @@
 
     <Button
         android:id="@+id/button44"
-        style="@style/gameButtonOrange"
+        android:tag="44"
+        style="@style/gameButtonClear"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/button43"

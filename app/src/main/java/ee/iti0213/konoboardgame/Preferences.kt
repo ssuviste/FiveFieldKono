@@ -6,7 +6,7 @@ object Preferences {
     private var blueAI = false
     private var orangeAI = false
 
-    fun getBlueStarts(): Boolean {
+    fun isBlueStarts(): Boolean {
         return this.blueStarts
     }
 
@@ -14,7 +14,7 @@ object Preferences {
         this.blueStarts = blueStarts
     }
 
-    fun getBlueAI(): Boolean {
+    fun isBlueAI(): Boolean {
         return this.blueAI
     }
 
@@ -22,7 +22,7 @@ object Preferences {
         this.blueAI = blueAI
     }
 
-    fun getOrangeAI(): Boolean {
+    fun isOrangeAI(): Boolean {
         return this.orangeAI
     }
 

@@ -18,9 +18,9 @@ class PreferencesActivity : AppCompatActivity() {
         val height = dm.heightPixels * 0.6
         window.setLayout(width.toInt(), height.toInt())
 
-        switchBlueStarts.isChecked = Preferences.getBlueStarts()
-        switchBlueAI.isChecked = Preferences.getBlueAI()
-        switchOrangeAI.isChecked = Preferences.getOrangeAI()
+        switchBlueStarts.isChecked = Preferences.isBlueStarts()
+        switchBlueAI.isChecked = Preferences.isBlueAI()
+        switchOrangeAI.isChecked = Preferences.isOrangeAI()
 
         switchBlueStarts.setOnCheckedChangeListener { _, isChecked ->
             Preferences.setBlueStarts(isChecked)

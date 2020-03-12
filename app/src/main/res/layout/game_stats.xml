@@ -38,14 +38,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/player1Color"
+        android:id="@+id/player1Icon"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:contentDescription="@string/player1"
         android:scaleType="fitStart"
         android:tint="@color/colorOrange"
-        app:layout_constraintBottom_toTopOf="@+id/player2Color"
+        app:layout_constraintBottom_toTopOf="@+id/player2Icon"
         app:layout_constraintEnd_toStartOf="@+id/player1Name"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -65,7 +65,7 @@
         app:layout_constraintBottom_toTopOf="@+id/player2Name"
         app:layout_constraintEnd_toStartOf="@+id/player1Score"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/player1Color"
+        app:layout_constraintStart_toEndOf="@+id/player1Icon"
         app:layout_constraintTop_toBottomOf="@+id/statsTitle"
         app:layout_constraintVertical_chainStyle="packed" />
 
@@ -75,8 +75,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        android:gravity="end|center_vertical"
-        android:text="@string/initial_score"
+        android:gravity="center_vertical|end"
+        android:text="@string/score_zero"
         app:layout_constraintBottom_toTopOf="@+id/player2Score"
         app:layout_constraintEnd_toStartOf="@+id/guidelineP1"
         app:layout_constraintHorizontal_bias="0.5"
@@ -85,7 +85,7 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <ImageView
-        android:id="@+id/player2Color"
+        android:id="@+id/player2Icon"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -96,7 +96,7 @@
         app:layout_constraintEnd_toStartOf="@+id/player2Name"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/player1Color"
+        app:layout_constraintTop_toBottomOf="@+id/player1Icon"
         app:srcCompat="@android:drawable/checkbox_off_background" />
 
     <TextView
@@ -110,7 +110,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/player2Score"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/player2Color"
+        app:layout_constraintStart_toEndOf="@+id/player2Icon"
         app:layout_constraintTop_toBottomOf="@+id/player1Name" />
 
     <TextView
@@ -120,7 +120,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:gravity="end|center_vertical"
-        android:text="@string/initial_score"
+        android:text="@string/score_zero"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guidelineP1"
         app:layout_constraintHorizontal_bias="0.5"
@@ -133,7 +133,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="buttonRestartOnClick"
-        android:text="@string/rst_btn"
+        android:text="@string/start_btn"
         app:layout_constraintBottom_toBottomOf="@+id/buttonHelp"
         app:layout_constraintEnd_toStartOf="@+id/buttonHelp"
         app:layout_constraintHeight_max="wrap"

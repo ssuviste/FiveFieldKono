@@ -1,99 +1,163 @@
 package ee.iti0213.konoboardgame
 
 import android.content.Intent
-import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.os.SystemClock
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
+import com.muddzdev.styleabletoast.StyleableToast
 import kotlinx.android.synthetic.main.game_stats.*
+import kotlinx.android.synthetic.main.game_stats.view.*
 
 class MainActivity : AppCompatActivity() {
 
-    companion object {
-        var moves = 0
+    private var helpBtnLastClickTime = 0L
+    private var prefBtnLastClickTime = 0L
+
+    private lateinit var handler: Handler
+    private val doAITurnCheck = object : Runnable {
+        override fun run() {
+            if (GameEngine.isAITurn()) {
+                val msg = GameEngine.doAIMove()
+                if (msg != null) showToastMsg(msg)
+                updateUI()
+            }
+            handler.postDelayed(this, C.AI_CHECK_INTERVAL)
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //initGameBoard()
+
+        handler = Handler(Looper.getMainLooper())
     }
 
-    /*private fun initGameBoard() {
-        val button = findViewById<Button>(R.id.button33)
-        val orange = ContextCompat.getColorStateList(this, R.color.colorOrange)
-        ViewCompat.setBackgroundTintList(button, orange)
-    }*/
+    override fun onPause() {
+        super.onPause()
 
-    // Just for testing UI color change
-    private fun swapButtonColor(view: View, colorList1: ColorStateList?, colorList2: ColorStateList?) {
-        when (ViewCompat.getBackgroundTintList(view)) {
-            colorList1 ->
-                ViewCompat.setBackgroundTintList(view, colorList2)
-            colorList2 ->
-                ViewCompat.setBackgroundTintList(view, colorList1)
-            else -> return
+        handler.removeCallbacks(doAITurnCheck)
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        updateUI()
+
+        if (Preferences.isOrangeAI() || Preferences.isBlueAI()) {
+            handler.postDelayed(doAITurnCheck, C.AI_CHECK_INTERVAL)
         }
     }
 
-    // Just for testing UI color change
-    private fun swapPlayerHighlights() {
-        val orange = ContextCompat.getColor(this, R.color.colorOrange)
-        val orangeH = ContextCompat.getColor(this, R.color.colorOrangeHighlighted)
-        val blue = ContextCompat.getColor(this, R.color.colorBlue)
-        val blueH = ContextCompat.getColor(this, R.color.colorBlueHighlighted)
-        val mode = android.graphics.PorterDuff.Mode.MULTIPLY
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(C.RST_BTN_STATE_KEY, buttonRestart.text.toString())
+    }
 
-        val player1Icon = findViewById<ImageView>(player1Color.id)
-        val player2Icon = findViewById<ImageView>(player2Color.id)
-
-        when (moves % 2) {
-            0 -> {
-                player1Icon.setColorFilter(orangeH, mode)
-                player2Icon.setColorFilter(blue, mode)
-            }
-            1 -> {
-                player1Icon.setColorFilter(orange, mode)
-                player2Icon.setColorFilter(blueH, mode)
-            }
-        }
-        moves++
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        buttonRestart.text = savedInstanceState.getString(
+            C.RST_BTN_STATE_KEY,
+            R.string.start_btn.toString()
+        )
     }
 
     fun buttonBoardOnClick(view: View) {
-        val orange = ContextCompat.getColorStateList(this, R.color.colorOrange)
-        val orangeH = ContextCompat.getColorStateList(this, R.color.colorOrangeHighlighted)
-        val blue = ContextCompat.getColorStateList(this, R.color.colorBlue)
-        val blueH = ContextCompat.getColorStateList(this, R.color.colorBlueHighlighted)
+        val msg = GameEngine.doPlayerMove(view.tag.toString())
+        if (msg != null) showToastMsg(msg)
 
-        when (ViewCompat.getBackgroundTintList(view)) {
-            blue, blueH -> swapButtonColor(view, blue, blueH)
-            orange, orangeH -> swapButtonColor(view, orange, orangeH)
-        }
-
-        swapPlayerHighlights()
+        updateUI()
     }
 
     fun buttonRestartOnClick(view: View) {
-        if (Preferences.getBlueStarts()) {
-            Toast.makeText(this, "TRUE", Toast.LENGTH_LONG).show()
-        } else {
-            Toast.makeText(this, "FALSE", Toast.LENGTH_LONG).show()
-        }
+        GameEngine.resetGame()
+        view.buttonRestart.text = getString(R.string.rst_btn)
+
+        updateUI()
     }
 
     fun buttonHelpOnClick(view: View) {
+        if (SystemClock.elapsedRealtime() - helpBtnLastClickTime < C.BTN_COOL_DOWN) {
+            return
+        }
+        helpBtnLastClickTime = SystemClock.elapsedRealtime()
+
         val intent = Intent(this, HelpActivity::class.java)
         startActivity(intent)
     }
 
     fun buttonPreferencesOnClick(view: View) {
+        if (SystemClock.elapsedRealtime() - prefBtnLastClickTime < C.BTN_COOL_DOWN) {
+            return
+        }
+        prefBtnLastClickTime = SystemClock.elapsedRealtime()
+
         val intent = Intent(this, PreferencesActivity::class.java)
         startActivity(intent)
+    }
+
+    private fun updateUI() {
+        updateBoard()
+        updatePlayerIcons()
+        updatePlayerScores()
+    }
+
+    private fun updateBoard() {
+        val gameBoard = GameEngine.getGameBoard()
+        for (y in gameBoard.indices) {
+            for (x in gameBoard[y].indices) {
+                val buttonId = resources.getIdentifier("button$y$x", "id", packageName)
+                val button = findViewById<Button>(buttonId)
+                val colorId = gameBoard[y][x].colorId
+                ViewCompat.setBackgroundTintList(
+                    button, ContextCompat.getColorStateList(this, colorId)
+                )
+            }
+        }
+    }
+
+    private fun updatePlayerIcons() {
+        val orange = ContextCompat.getColor(this, Color.ORANGE.colorId)
+        val orangeH = ContextCompat.getColor(this, Color.ORANGE_H.colorId)
+        val blue = ContextCompat.getColor(this, Color.BLUE.colorId)
+        val blueH = ContextCompat.getColor(this, Color.BLUE_H.colorId)
+        val mode = android.graphics.PorterDuff.Mode.MULTIPLY
+
+        when (GameEngine.getGameState()) {
+            GameState.ORANGE_TURN -> {
+                player1Icon.setColorFilter(orangeH, mode)
+                player2Icon.setColorFilter(blue, mode)
+            }
+            GameState.BLUE_TURN -> {
+                player1Icon.setColorFilter(orange, mode)
+                player2Icon.setColorFilter(blueH, mode)
+            }
+            else -> {
+                player1Icon.setColorFilter(orange, mode)
+                player2Icon.setColorFilter(blue, mode)
+            }
+        }
+    }
+
+    private fun updatePlayerScores() {
+        findViewById<TextView>(player1Score.id).text =
+            if (GameEngine.getOrangeScore() > C.MAX_SCORE)
+                C.MAX_SCORE.toString()
+            else GameEngine.getOrangeScore().toString()
+        findViewById<TextView>(player2Score.id).text =
+            if (GameEngine.getBlueScore() > C.MAX_SCORE)
+                C.MAX_SCORE.toString()
+            else GameEngine.getBlueScore().toString()
+    }
+
+    private fun showToastMsg(msg: String) {
+        StyleableToast.makeText(this, msg, Toast.LENGTH_LONG, R.style.glassToast).show()
     }
 }
