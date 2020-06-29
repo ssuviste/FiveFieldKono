@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
         updateUI()
 
-        if (Preferences.isOrangeAI() || Preferences.isBlueAI()) {
+        if (Preferences.orangeAI || Preferences.blueAI) {
             handler.postDelayed(doAITurnCheck, C.AI_CHECK_INTERVAL)
         }
     }
@@ -83,6 +83,7 @@ class MainActivity : AppCompatActivity() {
         updateUI()
     }
 
+    @Suppress("UNUSED_PARAMETER")
     fun buttonHelpOnClick(view: View) {
         if (SystemClock.elapsedRealtime() - helpBtnLastClickTime < C.BTN_COOL_DOWN) {
             return
@@ -93,6 +94,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    @Suppress("UNUSED_PARAMETER")
     fun buttonPreferencesOnClick(view: View) {
         if (SystemClock.elapsedRealtime() - prefBtnLastClickTime < C.BTN_COOL_DOWN) {
             return

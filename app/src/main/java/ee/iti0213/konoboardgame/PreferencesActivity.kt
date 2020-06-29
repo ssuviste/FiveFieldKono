@@ -18,23 +18,24 @@ class PreferencesActivity : AppCompatActivity() {
         val height = dm.heightPixels * 0.6
         window.setLayout(width.toInt(), height.toInt())
 
-        switchBlueStarts.isChecked = Preferences.isBlueStarts()
-        switchBlueAI.isChecked = Preferences.isBlueAI()
-        switchOrangeAI.isChecked = Preferences.isOrangeAI()
+        switchBlueStarts.isChecked = Preferences.blueStarts
+        switchBlueAI.isChecked = Preferences.blueAI
+        switchOrangeAI.isChecked = Preferences.orangeAI
 
         switchBlueStarts.setOnCheckedChangeListener { _, isChecked ->
-            Preferences.setBlueStarts(isChecked)
+            Preferences.blueStarts = isChecked
         }
 
         switchBlueAI.setOnCheckedChangeListener { _, isChecked ->
-            Preferences.setBlueAI(isChecked)
+            Preferences.blueAI = isChecked
         }
 
         switchOrangeAI.setOnCheckedChangeListener { _, isChecked ->
-            Preferences.setOrangeAI(isChecked)
+            Preferences.orangeAI = isChecked
         }
     }
 
+    @Suppress("UNUSED_PARAMETER")
     fun prefScreenCloseOnClick(view: View) {
         finish()
     }

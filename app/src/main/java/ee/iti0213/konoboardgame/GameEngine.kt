@@ -10,7 +10,7 @@ object GameEngine {
     private var orangeScore = 0
 
     fun getGameBoard(): Array<Array<Color>> {
-        return this.gameBoard
+        return this.gameBoard.deepCopy()
     }
 
     fun getGameState(): GameState? {
@@ -26,13 +26,13 @@ object GameEngine {
     }
 
     fun resetGame() {
-        gameState = if (Preferences.isBlueStarts()) GameState.BLUE_TURN else GameState.ORANGE_TURN
+        gameState = if (Preferences.blueStarts) GameState.BLUE_TURN else GameState.ORANGE_TURN
         resetBoard()
     }
 
     fun isAITurn(): Boolean {
-        return (gameState == GameState.BLUE_TURN && Preferences.isBlueAI()
-                || gameState == GameState.ORANGE_TURN && Preferences.isOrangeAI())
+        return (gameState == GameState.BLUE_TURN && Preferences.blueAI
+                || gameState == GameState.ORANGE_TURN && Preferences.orangeAI)
     }
 
     fun doAIMove(): String? {

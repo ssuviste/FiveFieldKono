@@ -18,6 +18,7 @@ class HelpActivity : AppCompatActivity() {
         window.setLayout(width.toInt(), height.toInt())
     }
 
+    @Suppress("UNUSED_PARAMETER")
     fun helpScreenCloseOnClick(view: View) {
         finish()
     }
