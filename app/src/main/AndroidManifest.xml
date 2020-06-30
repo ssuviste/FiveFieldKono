@@ -19,11 +19,11 @@
 
         <activity
             android:name=".HelpActivity"
-            android:theme="@style/popupScreen"></activity>
+            android:theme="@style/popupScreen" />
 
         <activity
             android:name=".PreferencesActivity"
-            android:theme="@style/popupScreen"></activity>
+            android:theme="@style/popupScreen" />
     </application>
 
 </manifest>
