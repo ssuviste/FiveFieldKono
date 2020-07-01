@@ -8,7 +8,7 @@
   * Rotation support for UI
   * Player scores display
   * Free-to-choose starting color
-  * Gaming modes:\
+  * Gaming modes:<br/>
     * Player vs Player
     * Player vs AI
     * AI vs AI
