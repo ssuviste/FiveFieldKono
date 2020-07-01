@@ -1,7 +1,16 @@
-# iti0213-2019s-hw1
+# Five Field Kono
 
-Nimi: Siim Suviste
+| Game Board | Preferences |  Instructions |
+|----------|-------------|---------------| 
+| ![screenshot](screenshots/screenshot1.png) | ![screenshot](screenshots/screenshot2.png) | ![screenshot](screenshots/screenshot3.png) |
 
-Uni-ID: siim.suviste
+Features: 
+  * Rotation support for UI
+  * Player scores display
+  * Free-to-choose starting color
+  * Multiple gaming modes: 
+    * Player vs Player
+    * Player vs AI
+    * AI vs AI
 
-Üliõpilaskood: 192226IAPM
+Screenshots for different devices and screen sizes can be found in screenshots/devices.pdf.
