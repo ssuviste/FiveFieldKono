@@ -12,6 +12,6 @@
     * Player vs Player
     * Player vs AI
     * AI vs AI 
-\
-\
+&nbsp;
+&nbsp;
 *Screenshots for different devices and screen sizes can be found in screenshots/devices.pdf.*
