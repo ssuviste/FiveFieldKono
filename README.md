@@ -13,4 +13,4 @@
     * Player vs AI
     * AI vs AI
 <br/>
-<i>Screenshots for different devices and screen sizes can be found in screenshots/devices.pdf.</i>
+<i>Screenshots for different devices and screen sizes can be found in <b>screenshots/devices.pdf</b></i>
