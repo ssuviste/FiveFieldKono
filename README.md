@@ -1,6 +1,6 @@
 # Five Field Kono
 
-|  Initial Game Board  | Preferences  | Instructions |
+|  Starting positions  | Preferences  | Instructions |
 |--------------|--------------|--------------| 
 | ![screenshot](screenshots/screenshot1.png) | ![screenshot](screenshots/screenshot2.png) | ![screenshot](screenshots/screenshot3.png) |
 
@@ -11,7 +11,7 @@
   * Gaming modes:
     * Player vs Player
     * Player vs AI
-    * AI vs AI  
-  
-  
+    * AI vs AI
+<br/>
+<br/>
 *Screenshots for different devices and screen sizes can be found in screenshots/devices.pdf.*
