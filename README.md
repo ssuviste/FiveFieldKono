@@ -11,6 +11,7 @@
   * Gaming modes:
     * Player vs Player
     * Player vs AI
-    * AI vs AI
+    * AI vs AI 
+\
 \
 *Screenshots for different devices and screen sizes can be found in screenshots/devices.pdf.*
