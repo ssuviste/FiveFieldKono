@@ -1,6 +1,6 @@
 # Five Field Kono
 
-|  Starting positions  | Preferences  | Instructions |
+|  Starting Positions  | Preferences  | Instructions |
 |--------------|--------------|--------------| 
 | ![screenshot](screenshots/screenshot1.png) | ![screenshot](screenshots/screenshot2.png) | ![screenshot](screenshots/screenshot3.png) |
 
@@ -12,6 +12,5 @@
     * Player vs Player
     * Player vs AI
     * AI vs AI
-<br/>
 <br/>
 *Screenshots for different devices and screen sizes can be found in screenshots/devices.pdf.*
