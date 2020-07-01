@@ -1,7 +1,7 @@
 # Five Field Kono
 
-|  Starting Positions  | Preferences  | Instructions |
-|--------------|--------------|--------------| 
+|  Game Board (5x5) | Preferences | Instructions |
+|-------------------|-------------|--------------| 
 | ![screenshot](screenshots/screenshot1.png) | ![screenshot](screenshots/screenshot2.png) | ![screenshot](screenshots/screenshot3.png) |
 
 ## Features:
