@@ -129,11 +129,11 @@ object GameEngine {
     }
 
     private fun gameOverIfWinner(): String? {
-        if (checkForWinningPosition(Color.BLUE, 4, 3, gameBoard)) {
+        if (checkForWinningPosition(Color.BLUE, gameBoard)) {
             gameState = GameState.BLUE_WIN
             blueScore++
             return GameState.BLUE_WIN.msg
-        } else if (checkForWinningPosition(Color.ORANGE, 0, 1, gameBoard)) {
+        } else if (checkForWinningPosition(Color.ORANGE, gameBoard)) {
             gameState = GameState.ORANGE_WIN
             orangeScore++
             return GameState.ORANGE_WIN.msg
@@ -149,7 +149,9 @@ object GameEngine {
         return null
     }
 
-    private fun checkForWinningPosition(color: Color, y1: Int, y2: Int, gameBoard: Array<Array<Color>>): Boolean {
+    private fun checkForWinningPosition(color: Color, gameBoard: Array<Array<Color>>): Boolean {
+        val y1 = if (color == Color.BLUE) 4 else 0
+        val y2 = if (color == Color.BLUE) 3 else 1
         val checkableSquares = findAllSquaresByColor(color, gameBoard)
         for (cs in checkableSquares) {
             if (cs.first() == y1) continue
@@ -168,7 +170,9 @@ object GameEngine {
         return false
     }
 
-    private fun findAllSquaresByColor(color: Color, gameBoard: Array<Array<Color>>): ArrayList<Array<Int>> {
+    private fun findAllSquaresByColor(
+        color: Color, gameBoard: Array<Array<Color>>
+    ): ArrayList<Array<Int>> {
         val result = arrayListOf<Array<Int>>()
         val colorH = if (color == Color.BLUE) Color.BLUE_H else Color.ORANGE_H
         for (y in gameBoard.indices) {
@@ -183,14 +187,12 @@ object GameEngine {
 
     private fun findWinningMove(color: Color): ArrayList<Array<Int>> {
         val result = arrayListOf<Array<Int>>()
-        val y1 = if (color == Color.BLUE) 4 else 0
-        val y2 = if (color == Color.BLUE) 3 else 1
         val tempBoard = gameBoard.deepCopy()
         for (square in findAllSquaresByColor(color, gameBoard)) {
             for (move in findDiagonalsWithColor(square.first(), square.last(), Color.CLEAR)) {
                 tempBoard[square.first()][square.last()] = Color.CLEAR
                 tempBoard[move.first()][move.last()] = color
-                if (checkForWinningPosition(color, y1, y2, tempBoard)) {
+                if (checkForWinningPosition(color, tempBoard)) {
                     result.add(arrayOf(square.first(), square.last()))
                     result.add(arrayOf(move.first(), move.last()))
                     return result
