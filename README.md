@@ -1,16 +1,16 @@
 # Five Field Kono
 
-|  Game Board  | Preferences  | Instructions |
+|  Game Boardaaaaa  | Preferences  | Instructions |
 |--------------|--------------|--------------| 
 | ![screenshot](screenshots/screenshot1.png) | ![screenshot](screenshots/screenshot2.png) | ![screenshot](screenshots/screenshot3.png) |
 
 Features: 
- * Rotation support for UI
- * Player scores display
- * Multiple gaming modes
-  * Player vs Player
-  * Player vs AI
-  * AI vs AI
+  * Rotation support for UI
+  * Player scores display
+  * Multiple gaming modes
+    * Player vs Player
+    * Player vs AI
+    * AI vs AI
  * Free-to-choose starting color
 
 
