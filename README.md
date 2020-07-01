@@ -1,6 +1,6 @@
 # Five Field Kono
 
-|  Game Boardaaaaaaa  | Preferences  | Instructions |
+|  Initial Game Board  | Preferences  | Instructions |
 |--------------|--------------|--------------| 
 | ![screenshot](screenshots/screenshot1.png) | ![screenshot](screenshots/screenshot2.png) | ![screenshot](screenshots/screenshot3.png) |
 
