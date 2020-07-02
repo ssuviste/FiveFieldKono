@@ -9,7 +9,7 @@
     * Player vs AI
     * AI vs AI
 
-
+| Gameboard | Preferences | Instructions |
 |-----------|-------------|--------------| 
 | ![screenshot](screenshots/screenshot1.png) | ![screenshot](screenshots/screenshot2.png) | ![screenshot](screenshots/screenshot3.png) |
 
