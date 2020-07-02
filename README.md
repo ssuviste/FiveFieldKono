@@ -3,7 +3,7 @@
 ## Features:
   * Rotation support for UI
   * Player scores display
-  * Free-to-choose starting color
+  * Free-to-choose starting player
   * Implemented AI
 <br/>
 
