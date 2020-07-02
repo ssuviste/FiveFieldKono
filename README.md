@@ -5,6 +5,7 @@
   * Player scores display
   * Free-to-choose starting color
   * Implemented AI
+<br/>
 
 | Gameboard | Preferences | Instructions |
 |-----------|-------------|--------------| 
